@@ -95,6 +95,23 @@
       </div>
       {{ end }}
 
+      {{ with $page.Params.awards }}
+      <div class="col-sm-7">
+        <h3>Achievements</h3>
+        <ul class="ul-edu fa-ul">
+          {{ range . }}
+          <li>
+            <i class="fa-li fa fa-trophy"></i>
+            <div class="description">
+              <p class="course">{{ .title }}{{ with .year }}, {{ . }}{{ end }}</p>
+              <p class="institution">{{ .from }}</p>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
     </div>
   </div>
 </div>
